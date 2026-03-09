@@ -1,229 +1,149 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Đinh Lan Anh - Portfolio</title>
+<title>My Portfolio</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
-
 body{
-background:#f4f6fb;
-color:#333;
-line-height:1.6;
+    font-family: Arial, sans-serif;
+    margin:0;
+    background: linear-gradient(135deg,#ffd6e7,#ffeaf3);
+    color:#5a3a44;
 }
 
-/* NAVBAR */
+/* Header */
 
-nav{
-background:white;
-display:flex;
-justify-content:space-between;
-padding:15px 10%;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:1000;
+header{
+    text-align:center;
+    padding:60px 20px;
 }
 
-nav a{
-text-decoration:none;
-margin-left:20px;
-color:#333;
-font-weight:500;
+h1{
+    font-size:40px;
+    color:#ff6fa5;
 }
 
-nav a:hover{
-color:#2563eb;
+h2{
+    color:#ff6fa5;
 }
 
-/* HERO */
+/* Section */
 
-.hero{
-height:70vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#2563eb,#4f46e5);
-color:white;
-text-align:center;
-padding:20px;
+section{
+    padding:40px;
+    max-width:900px;
+    margin:auto;
 }
 
-.avatar{
-width:150px;
-height:150px;
-border-radius:50%;
-border:4px solid white;
-margin-bottom:20px;
+/* Project card */
+
+.project{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
 
-.hero h1{
-font-size:40px;
-margin-bottom:10px;
+.project:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
-.hero p{
-font-size:18px;
+/* Button */
+
+button{
+    background:#ff8db8;
+    border:none;
+    padding:10px 18px;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
 }
 
-/* SECTION */
-
-.section{
-max-width:1000px;
-margin:auto;
-padding:60px 20px;
+button:hover{
+    background:#ff6fa5;
 }
 
-.section h2{
-font-size:28px;
-margin-bottom:25px;
-color:#2563eb;
+/* Detail */
+
+.detail{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    background:#fff0f6;
+    border-radius:10px;
 }
-
-/* PROJECT */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 12px 30px rgba(0,0,0,0.15);
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.card ul{
-margin-left:20px;
-margin-top:10px;
-}
-
-/* SKILLS */
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.skill{
-background:#e0e7ff;
-padding:8px 12px;
-border-radius:6px;
-}
-
-/* CONTACT */
-
-.contact p{
-margin:8px 0;
-}
-
-/* FOOTER */
 
 footer{
-text-align:center;
-padding:30px;
-color:#777;
+    text-align:center;
+    padding:20px;
+    color:#777;
 }
 
 </style>
 
-</head>
+<script>
 
+function toggleDetail(id){
+    const el = document.getElementById(id)
+
+    if(el.style.display === "block"){
+        el.style.display = "none"
+    }else{
+        el.style.display = "block"
+    }
+}
+
+</script>
+
+</head>
 
 <body>
 
-<!-- NAVBAR -->
+<header>
 
-<nav>
+<h1>My Portfolio</h1>
+<p>Sinh viên | International Business</p>
 
-<div><b>Lan Anh</b></div>
+</header>
 
-<div>
+<section>
 
-<a href="#about">Giới thiệu</a>
-<a href="#projects">Dự án</a>
-<a href="#skills">Kỹ năng</a>
-<a href="#contact">Liên hệ</a>
-
-</div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<div class="hero">
-
-<img src="avatar.jpg" class="avatar">
-
-<h1>Đinh Lan Anh</h1>
-
-<p>Sinh viên Kinh tế đối ngoại – Đại học Ngoại Thương</p>
-
-</div>
-
-
-<!-- ABOUT -->
-
-<div class="section" id="about">
-
-<h2>Giới thiệu</h2>
+<h2>📌 About Me</h2>
 
 <p>
-Tôi là sinh viên năm hai ngành Kinh tế đối ngoại tại Đại học Ngoại Thương,
-quan tâm đến lĩnh vực thương mại quốc tế và phân tích thị trường.
+Tôi là sinh viên ngành kinh doanh quốc tế. 
+Tôi quan tâm đến thương mại quốc tế, xuất khẩu và phân tích thị trường.
 </p>
 
-<br>
-
-<p>
-Tôi thích tìm hiểu về xu hướng kinh tế toàn cầu, hoạt động xuất nhập khẩu
-và chiến lược mở rộng thị trường của doanh nghiệp Việt Nam.
-</p>
-
-</div>
+</section>
 
 
-<!-- PROJECTS -->
+<section>
 
-<div class="section" id="projects">
+<h2>📂 My Projects</h2>
 
-<h2>Dự án học tập</h2>
 
-<div class="projects">
+<!-- Project 1 -->
 
-<!-- PROJECT 1 -->
-
-<div class="card">
+<div class="project">
 
 <h3>Xuất khẩu nông sản Việt Nam</h3>
 
-<p><b>Môn học:</b> Chính sách thương mại quốc tế</p>
+<p>Môn: Chính sách thương mại quốc tế</p>
+
+<button onclick="toggleDetail('p1')">
+Xem chi tiết
+</button>
+
+<div id="p1" class="detail">
 
 <p><b>Mục tiêu</b></p>
 
@@ -235,7 +155,7 @@ Phân tích tình hình xuất khẩu nông sản của Việt Nam và các cơ 
 
 <ul>
 <li>Tìm hiểu số liệu xuất khẩu từ các báo cáo kinh tế</li>
-<li>Phân tích các thị trường Trung Quốc, Mỹ, EU</li>
+<li>Phân tích thị trường Trung Quốc, Mỹ và EU</li>
 <li>Đề xuất hướng phát triển cho doanh nghiệp</li>
 </ul>
 
@@ -249,25 +169,33 @@ Phân tích tình hình xuất khẩu nông sản của Việt Nam và các cơ 
 
 </div>
 
+</div>
 
-<!-- PROJECT 2 -->
 
-<div class="card">
+<!-- Project 2 -->
+
+<div class="project">
 
 <h3>Hiệp định EVFTA</h3>
 
-<p><b>Vai trò:</b> Thành viên nhóm</p>
+<p>Vai trò: Thành viên nhóm</p>
+
+<button onclick="toggleDetail('p2')">
+Xem chi tiết
+</button>
+
+<div id="p2" class="detail">
 
 <p><b>Mục tiêu</b></p>
 
 <p>
-Giới thiệu về hiệp định EVFTA và tác động của hiệp định này đối với doanh nghiệp Việt Nam.
+Giới thiệu về hiệp định EVFTA và tác động đối với doanh nghiệp Việt Nam.
 </p>
 
 <p><b>Nội dung</b></p>
 
 <ul>
-<li>Nghiên cứu các điều khoản cơ bản của EVFTA</li>
+<li>Nghiên cứu các điều khoản của EVFTA</li>
 <li>Phân tích cơ hội và thách thức</li>
 <li>Chuẩn bị slide và thuyết trình</li>
 </ul>
@@ -282,14 +210,22 @@ Giới thiệu về hiệp định EVFTA và tác động của hiệp định n
 
 </div>
 
+</div>
 
-<!-- PROJECT 3 -->
 
-<div class="card">
+<!-- Project 3 -->
+
+<div class="project">
 
 <h3>Chiến lược mở rộng thị trường của Vinamilk</h3>
 
-<p><b>Môn học:</b> Kinh doanh quốc tế</p>
+<p>Môn: Kinh doanh quốc tế</p>
+
+<button onclick="toggleDetail('p3')">
+Xem chi tiết
+</button>
+
+<div id="p3" class="detail">
 
 <p><b>Mục tiêu</b></p>
 
@@ -309,78 +245,114 @@ Phân tích cách Vinamilk mở rộng thị trường ra nước ngoài.
 
 <ul>
 <li>Phân tích doanh nghiệp</li>
-<li>Tư duy chiến lược cơ bản</li>
+<li>Tư duy chiến lược</li>
 </ul>
 
 </div>
 
 </div>
+<section>
+
+<h2>💡 Kỹ năng</h2>
+
+<div class="project">
+
+<h3>Kỹ năng học tập</h3>
+
+<ul>
+<li>Nghiên cứu và tổng hợp thông tin</li>
+<li>Phân tích dữ liệu cơ bản</li>
+<li>Viết báo cáo học thuật</li>
+<li>Thuyết trình</li>
+</ul>
 
 </div>
 
+<div class="project">
 
-<!-- SKILLS -->
+<h3>Công cụ</h3>
 
-<div class="section" id="skills">
-
-<h2>Kỹ năng</h2>
-
-<div class="skills">
-
-<div class="skill">Research</div>
-<div class="skill">Market Analysis</div>
-<div class="skill">Academic Writing</div>
-<div class="skill">Presentation</div>
-<div class="skill">Excel</div>
-<div class="skill">PowerPoint</div>
-<div class="skill">Canva</div>
+<ul>
+<li>Microsoft Excel (cơ bản)</li>
+<li>PowerPoint</li>
+<li>Google Docs / Sheets</li>
+<li>Canva</li>
+</ul>
 
 </div>
 
-</div>
+<div class="project">
 
+<h3>Ngoại ngữ</h3>
 
-<!-- CONTACT -->
-
-<div class="section contact" id="contact">
-
-<h2>Liên hệ</h2>
-
-<p>Email: dinhlananh000@email.com</p>
-<p>SĐT: 0392854920</p>
-<p>Website: dinhlananh.github.io</p>
+<ul>
+<li>Tiếng Anh: giao tiếp và đọc tài liệu chuyên ngành</li>
+<li>Tiếng Trung: giao tiếp cơ bản</li>
+</ul>
 
 </div>
+
+</section>
+
+
+
+<section>
+
+<h2>🎯 Hoạt động</h2>
+
+<div class="project">
+
+<ul>
+<li>Thành viên CLB học thuật tại Đại học Ngoại Thương</li>
+
+<li>Tham gia các workshop về kinh tế và kinh doanh quốc tế</li>
+
+<li>Hỗ trợ tổ chức một số sự kiện học thuật của câu lạc bộ</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h2>🚀 Định hướng</h2>
+
+<div class="project">
+
+<p>
+Tôi mong muốn tiếp tục học hỏi và tích lũy kinh nghiệm trong các lĩnh vực:
+</p>
+
+<ul>
+
+<li>Thương mại quốc tế</li>
+
+<li>Phân tích thị trường</li>
+
+<li>Kinh doanh toàn cầu</li>
+
+</ul>
+
+<p>
+Trong thời gian tới, tôi đang tìm kiếm cơ hội thực tập hoặc tham gia các dự án học thuật để phát triển thêm kỹ năng và hiểu rõ hơn về môi trường làm việc thực tế.
+</p>
+
+</div>
+
+</section>
+
+</section>
 
 
 <footer>
 
-<p>© 2026 Lan Anh Portfolio</p>
+<p>© 2026 My Portfolio</p>
 
 </footer>
-
-
-<!-- SCROLL EFFECT -->
-
-<script>
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.style.opacity=1
-entry.target.style.transform="translateY(0)"
-}
-})
-})
-
-document.querySelectorAll(".section").forEach(section=>{
-section.style.opacity=0
-section.style.transform="translateY(40px)"
-section.style.transition="all 0.8s"
-observer.observe(section)
-})
-
-</script>
 
 
 </body>
