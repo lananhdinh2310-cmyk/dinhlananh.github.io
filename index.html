@@ -1,88 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lan Anh Portfolio</title>
 
 <style>
 
-body{
-font-family: Arial;
+*{
 margin:0;
-background:#f5f5f5;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
-header{
-background:#1e3a8a;
+body{
+background:#f4f6fb;
+color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+background:white;
+display:flex;
+justify-content:space-between;
+padding:15px 10%;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+}
+
+nav a{
+text-decoration:none;
+margin-left:20px;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:#2563eb;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#2563eb,#4f46e5);
 color:white;
-padding:40px;
 text-align:center;
 }
 
-section{
-padding:40px;
-max-width:900px;
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* SECTION */
+
+.section{
+max-width:1000px;
 margin:auto;
-background:white;
-margin-top:20px;
-border-radius:8px;
+padding:60px 20px;
 }
 
-h2{
-color:#1e3a8a;
-}
-
-.project{
+.section h2{
+font-size:28px;
 margin-bottom:25px;
+color:#2563eb;
 }
 
-.skills span{
-background:#e5e7eb;
-padding:6px 10px;
-margin:5px;
-display:inline-block;
+/* PROJECT CARDS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skill{
+background:#e0e7ff;
+padding:8px 12px;
 border-radius:6px;
 }
 
+/* CONTACT */
+
+.contact p{
+margin:6px 0;
+}
+
+/* FOOTER */
+
 footer{
 text-align:center;
-padding:20px;
-color:gray;
+padding:30px;
+color:#888;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-<h1>Đinh Lan Anh</h1>
-<p>Sinh viên Kinh tế đối ngoại – Đại học Ngoại Thương</p>
-<p>Email: dinhlananh000@email.com | SDT: 0392854920</p>
-</header>
+<!-- NAVBAR -->
 
-<section>
+<nav>
+
+<div><b>Lan Anh</b></div>
+
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Đinh Lan Anh</h1>
+
+<p>Sinh viên Kinh tế đối ngoại – Đại học Ngoại Thương</p>
+
+</div>
+
+<!-- ABOUT -->
+
+<div class="section" id="about">
 
 <h2>Giới thiệu</h2>
 
 <p>
 Tôi là sinh viên năm hai ngành Kinh tế đối ngoại tại Đại học Ngoại Thương,
-quan tâm đến lĩnh vực thương mại quốc tế và phân tích thị trường.
+quan tâm đến thương mại quốc tế và phân tích thị trường.
 </p>
 
+<br>
+
 <p>
-Tôi thích tìm hiểu về xu hướng kinh tế toàn cầu, hoạt động xuất nhập khẩu
+Tôi thích tìm hiểu xu hướng kinh tế toàn cầu, hoạt động xuất nhập khẩu
 và chiến lược mở rộng thị trường của doanh nghiệp Việt Nam.
 </p>
 
-</section>
+</div>
 
-<section>
+<!-- PROJECTS -->
+
+<div class="section" id="projects">
 
 <h2>Dự án tiêu biểu</h2>
 
-<div class="project">
+<div class="projects">
+
+<div class="card">
 
 <h3>Xuất khẩu nông sản Việt Nam</h3>
 
@@ -93,20 +196,19 @@ trong tương lai.
 
 </div>
 
-<div class="project">
+<div class="card">
 
 <h3>Hiệp định EVFTA</h3>
 
 <p>
-Bài thuyết trình nhóm về tác động của hiệp định EVFTA
-đối với doanh nghiệp Việt Nam.
+Bài thuyết trình nhóm về tác động của hiệp định EVFTA đối với doanh nghiệp Việt Nam.
 </p>
 
 </div>
 
-<div class="project">
+<div class="card">
 
-<h3>Chiến lược mở rộng thị trường của Vinamilk</h3>
+<h3>Chiến lược Vinamilk</h3>
 
 <p>
 Case study phân tích chiến lược mở rộng thị trường quốc tế của Vinamilk.
@@ -114,53 +216,41 @@ Case study phân tích chiến lược mở rộng thị trường quốc tế c
 
 </div>
 
-</section>
+</div>
 
-<section>
+</div>
+
+<!-- SKILLS -->
+
+<div class="section" id="skills">
 
 <h2>Kỹ năng</h2>
 
 <div class="skills">
 
-<span>Research</span>
-<span>Data Analysis</span>
-<span>Academic Writing</span>
-<span>Presentation</span>
-<span>Excel</span>
-<span>PowerPoint</span>
-<span>Canva</span>
+<div class="skill">Research</div>
+<div class="skill">Market Analysis</div>
+<div class="skill">Academic Writing</div>
+<div class="skill">Presentation</div>
+<div class="skill">Excel</div>
+<div class="skill">PowerPoint</div>
+<div class="skill">Canva</div>
 
 </div>
 
-</section>
+</div>
 
-<section>
+<!-- CONTACT -->
 
-<h2>Hoạt động</h2>
+<div class="section contact" id="contact">
 
-<ul>
-<li>Thành viên CLB học thuật Đại học Ngoại Thương</li>
-<li>Tham gia workshop về kinh tế và kinh doanh quốc tế</li>
-<li>Hỗ trợ tổ chức sự kiện học thuật</li>
-</ul>
+<h2>Liên hệ</h2>
 
-</section>
+<p>Email: dinhlananh000@email.com</p>
+<p>SĐT: 0392854920</p>
+<p>Website: dinhlananh.github.io</p>
 
-<section>
-
-<h2>Định hướng</h2>
-
-<p>
-Tôi mong muốn phát triển trong lĩnh vực thương mại quốc tế,
-phân tích thị trường và kinh doanh toàn cầu.
-</p>
-
-<p>
-Trong thời gian tới tôi đang tìm kiếm cơ hội thực tập
-hoặc tham gia các dự án học thuật để tích lũy kinh nghiệm.
-</p>
-
-</section>
+</div>
 
 <footer>
 
