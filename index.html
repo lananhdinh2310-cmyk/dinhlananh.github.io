@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lan Anh Portfolio</title>
+<title>Đinh Lan Anh - Portfolio</title>
 
 <style>
 
@@ -18,6 +20,7 @@ font-family:Arial;
 body{
 background:#f4f6fb;
 color:#333;
+line-height:1.6;
 }
 
 /* NAVBAR */
@@ -30,6 +33,7 @@ padding:15px 10%;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 position:sticky;
 top:0;
+z-index:1000;
 }
 
 nav a{
@@ -46,7 +50,7 @@ color:#2563eb;
 /* HERO */
 
 .hero{
-height:60vh;
+height:70vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -54,10 +58,19 @@ align-items:center;
 background:linear-gradient(135deg,#2563eb,#4f46e5);
 color:white;
 text-align:center;
+padding:20px;
+}
+
+.avatar{
+width:150px;
+height:150px;
+border-radius:50%;
+border:4px solid white;
+margin-bottom:20px;
 }
 
 .hero h1{
-font-size:42px;
+font-size:40px;
 margin-bottom:10px;
 }
 
@@ -79,12 +92,12 @@ margin-bottom:25px;
 color:#2563eb;
 }
 
-/* PROJECT CARDS */
+/* PROJECT */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
@@ -96,7 +109,17 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card ul{
+margin-left:20px;
+margin-top:10px;
 }
 
 /* SKILLS */
@@ -116,7 +139,7 @@ border-radius:6px;
 /* CONTACT */
 
 .contact p{
-margin:6px 0;
+margin:8px 0;
 }
 
 /* FOOTER */
@@ -124,11 +147,13 @@ margin:6px 0;
 footer{
 text-align:center;
 padding:30px;
-color:#888;
+color:#777;
 }
 
 </style>
+
 </head>
+
 
 <body>
 
@@ -139,23 +164,29 @@ color:#888;
 <div><b>Lan Anh</b></div>
 
 <div>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
+
+<a href="#about">Giới thiệu</a>
+<a href="#projects">Dự án</a>
+<a href="#skills">Kỹ năng</a>
+<a href="#contact">Liên hệ</a>
+
 </div>
 
 </nav>
 
+
 <!-- HERO -->
 
 <div class="hero">
+
+<img src="avatar.jpg" class="avatar">
 
 <h1>Đinh Lan Anh</h1>
 
 <p>Sinh viên Kinh tế đối ngoại – Đại học Ngoại Thương</p>
 
 </div>
+
 
 <!-- ABOUT -->
 
@@ -165,60 +196,128 @@ color:#888;
 
 <p>
 Tôi là sinh viên năm hai ngành Kinh tế đối ngoại tại Đại học Ngoại Thương,
-quan tâm đến thương mại quốc tế và phân tích thị trường.
+quan tâm đến lĩnh vực thương mại quốc tế và phân tích thị trường.
 </p>
 
 <br>
 
 <p>
-Tôi thích tìm hiểu xu hướng kinh tế toàn cầu, hoạt động xuất nhập khẩu
+Tôi thích tìm hiểu về xu hướng kinh tế toàn cầu, hoạt động xuất nhập khẩu
 và chiến lược mở rộng thị trường của doanh nghiệp Việt Nam.
 </p>
 
 </div>
 
+
 <!-- PROJECTS -->
 
 <div class="section" id="projects">
 
-<h2>Dự án tiêu biểu</h2>
+<h2>Dự án học tập</h2>
 
 <div class="projects">
+
+<!-- PROJECT 1 -->
 
 <div class="card">
 
 <h3>Xuất khẩu nông sản Việt Nam</h3>
 
+<p><b>Môn học:</b> Chính sách thương mại quốc tế</p>
+
+<p><b>Mục tiêu</b></p>
+
 <p>
-Phân tích tình hình xuất khẩu nông sản của Việt Nam và cơ hội phát triển
-trong tương lai.
+Phân tích tình hình xuất khẩu nông sản của Việt Nam và các cơ hội phát triển trong tương lai.
 </p>
 
+<p><b>Nội dung thực hiện</b></p>
+
+<ul>
+<li>Tìm hiểu số liệu xuất khẩu từ các báo cáo kinh tế</li>
+<li>Phân tích các thị trường Trung Quốc, Mỹ, EU</li>
+<li>Đề xuất hướng phát triển cho doanh nghiệp</li>
+</ul>
+
+<p><b>Kỹ năng</b></p>
+
+<ul>
+<li>Research</li>
+<li>Tổng hợp thông tin</li>
+<li>Viết báo cáo</li>
+</ul>
+
 </div>
+
+
+<!-- PROJECT 2 -->
 
 <div class="card">
 
 <h3>Hiệp định EVFTA</h3>
 
+<p><b>Vai trò:</b> Thành viên nhóm</p>
+
+<p><b>Mục tiêu</b></p>
+
 <p>
-Bài thuyết trình nhóm về tác động của hiệp định EVFTA đối với doanh nghiệp Việt Nam.
+Giới thiệu về hiệp định EVFTA và tác động của hiệp định này đối với doanh nghiệp Việt Nam.
 </p>
 
+<p><b>Nội dung</b></p>
+
+<ul>
+<li>Nghiên cứu các điều khoản cơ bản của EVFTA</li>
+<li>Phân tích cơ hội và thách thức</li>
+<li>Chuẩn bị slide và thuyết trình</li>
+</ul>
+
+<p><b>Kỹ năng</b></p>
+
+<ul>
+<li>Làm việc nhóm</li>
+<li>Thuyết trình</li>
+<li>PowerPoint</li>
+</ul>
+
 </div>
+
+
+<!-- PROJECT 3 -->
 
 <div class="card">
 
-<h3>Chiến lược Vinamilk</h3>
+<h3>Chiến lược mở rộng thị trường của Vinamilk</h3>
+
+<p><b>Môn học:</b> Kinh doanh quốc tế</p>
+
+<p><b>Mục tiêu</b></p>
 
 <p>
-Case study phân tích chiến lược mở rộng thị trường quốc tế của Vinamilk.
+Phân tích cách Vinamilk mở rộng thị trường ra nước ngoài.
 </p>
 
-</div>
+<p><b>Nội dung</b></p>
+
+<ul>
+<li>Tìm hiểu các thị trường Vinamilk đã xuất khẩu</li>
+<li>Phân tích chiến lược thương hiệu và phân phối</li>
+<li>Đưa ra nhận xét cá nhân</li>
+</ul>
+
+<p><b>Kỹ năng</b></p>
+
+<ul>
+<li>Phân tích doanh nghiệp</li>
+<li>Tư duy chiến lược cơ bản</li>
+</ul>
 
 </div>
 
 </div>
+
+</div>
+
 
 <!-- SKILLS -->
 
@@ -240,6 +339,7 @@ Case study phân tích chiến lược mở rộng thị trường quốc tế c
 
 </div>
 
+
 <!-- CONTACT -->
 
 <div class="section contact" id="contact">
@@ -252,11 +352,37 @@ Case study phân tích chiến lược mở rộng thị trường quốc tế c
 
 </div>
 
+
 <footer>
 
 <p>© 2026 Lan Anh Portfolio</p>
 
 </footer>
 
+
+<!-- SCROLL EFFECT -->
+
+<script>
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity=1
+entry.target.style.transform="translateY(0)"
+}
+})
+})
+
+document.querySelectorAll(".section").forEach(section=>{
+section.style.opacity=0
+section.style.transform="translateY(40px)"
+section.style.transition="all 0.8s"
+observer.observe(section)
+})
+
+</script>
+
+
 </body>
+
 </html>
